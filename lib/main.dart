@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,15 +35,14 @@ class HomeScreen extends StatelessWidget {
               child: TextButton(
                 style: ButtonStyle(
                   foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
-                  backgroundColor: WidgetStateProperty.all<Color>(Colors.green),
-                  overlayColor: WidgetStateProperty.resolveWith<Color?>(
-                    (Set<WidgetState> states) {
-                      if (states.contains(WidgetState.pressed)) {
-                        return Colors.greenAccent;
-                      }
-                      return null;
-                    },
-                  ),
+                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                  overlayColor: WidgetStateProperty.resolveWith<Color?>((
+                    Set<WidgetState> states,
+                  ) {
+                    if (states.contains(WidgetState.pressed))
+                      return Colors.black.withGreen(122);
+                    return null;
+                  }),
                 ),
                 onPressed: () {
                   Navigator.push(
