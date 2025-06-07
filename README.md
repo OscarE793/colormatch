@@ -57,8 +57,10 @@ Este proyecto forma parte de un desarrollo educativo y colaborativo.
 
 🧑‍💻 Autor
 Óscar Jaramillo
-Desarrollador de software | Creativo digital | En constante evolución
-GitHub: OscarE793
+| Desarrolladores de software | 
+| Oscar Eduardo Jaramillo Plaza |
+| Juan Sebastián vasquez leon |
+GitHub: OscarE793 
 
 ⚠️ Licencia
 Este proyecto está licenciado bajo MIT. Puedes usarlo, modificarlo y distribuirlo libremente, siempre y cuando menciones al autor original.
