@@ -37,11 +37,37 @@
 
 ## 🛠️ Instrucciones de desarrollo
 
-### 📦 Requisitos
+### 📦  Requisitos para ejecutar y desarrollar Color Match
 
-- Flutter 3.32.2 o superior
-- Android Studio o emulador configurado
-- VS Code (opcional)
+A continuación te dejo un desglose más detallado y profesional para incluirlo en tu README.md o documentación técnica:
+
+📌 Requisitos del entorno de desarrollo
+🔹 Sistema Operativo:
+Windows 10 o superior (también compatible con macOS o Linux)
+
+🔹 Herramientas necesarias:
+
+| Herramienta|	Versión |recomendada	|Descripción|
+| Flutter SDK |	3.32.2+ |	Framework principal para el desarrollo del juego |
+| Android Studio |	2024.3.2 o superior |	Para gestionar emuladores Android y SDKs |
+| Visual Studio Code |	1.100.3+ |	Editor de código recomendado (opcional) |
+| Git |	Cualquiera |	Para control de versiones y colaboración |
+| SDK de Android y emulador configurado |	API 34+ |	Para probar en dispositivos virtuales |
+
+🔹 Dependencias Flutter:
+
+Ya declaradas en pubspec.yaml, pero puedes ejecutar:
+
+Requisitos para ejecutar el juego
+Dispositivo Android o emulador activo
+
+Memoria mínima: 2 GB RAM
+
+Android 8.0 (API 26) o superior
+
+Red no necesaria (funciona offline)
+
+```bash
 
 ### 🧪 Clonar el repositorio
 
@@ -55,11 +81,11 @@ flutter pub get
 Este proyecto forma parte de un desarrollo educativo y colaborativo.
 ¡Pull requests, issues y sugerencias son siempre bienvenidas!
 
-🧑‍💻 Autor
+🧑‍💻 Autorres
 Óscar Jaramillo
 | Desarrolladores de software | 
-| Oscar Eduardo Jaramillo Plaza |
-| Juan Sebastián vasquez leon |
+ Oscar Eduardo Jaramillo Plaza 
+ Juan Sebastián vasquez leon 
 GitHub: OscarE793 
 
 ⚠️ Licencia
