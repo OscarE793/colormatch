@@ -6,9 +6,9 @@
 
 ## 📱 Capturas de pantalla
 
-| Pantalla de Inicio | Selección de Niveles | Juego en Curso |
-|--------------------|----------------------|----------------|
-| ![Inicio](assets/images/logo.GIF) | ![Niveles](assets/images/SS.png) | *(próximamente)* |
+| Pantalla de Inicio | Selección de Niveles | Juego en Curso | Juego en Curso |
+|--------------------|----------------------|----------------|----------------|
+| ![Inicio](assets/images/Inicio.png) | ![Niveles](assets/images/Niveles.png) | ![Juego](assets/images/Juego.png)-+ |
 
 ---
 
