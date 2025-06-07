@@ -48,11 +48,12 @@ Windows 10 o superior (también compatible con macOS o Linux)
 🔹 Herramientas necesarias:
 
 | Herramienta|	Versión |recomendada	|Descripción|
-| Flutter SDK |	3.32.2+ |	Framework principal para el desarrollo del juego |
-| Android Studio |	2024.3.2 o superior |	Para gestionar emuladores Android y SDKs |
-| Visual Studio Code |	1.100.3+ |	Editor de código recomendado (opcional) |
-| Git |	Cualquiera |	Para control de versiones y colaboración |
-| SDK de Android y emulador configurado |	API 34+ |	Para probar en dispositivos virtuales |
+|--------------------|----------------------|----------------|
+| ![Flutter SDK] |	3.32.2+ |	Framework principal para el desarrollo del juego |
+| ![Android Studio] |	2024.3.2 o superior |	Para gestionar emuladores Android y SDKs |
+| ![Visual Studio Code] |	1.100.3+ |	Editor de código recomendado (opcional) |
+| ![Git] |	Cualquiera |	Para control de versiones y colaboración |
+| ![SDK de Android y emulador configurado] |	API 34+ |	Para probar en dispositivos virtuales |
 
 🔹 Dependencias Flutter:
 
