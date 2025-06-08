@@ -1,5 +1,6 @@
+import 'package:color_match/Menu.dart';
 import 'package:flutter/material.dart';
-import 'package:color_match/levels.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Levels()),
+                    MaterialPageRoute(builder: (context) => const Menu()),
                   );
                 },
                 child: const Text("Play"),
