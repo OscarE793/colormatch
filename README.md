@@ -45,7 +45,7 @@ A continuación te dejo un desglose más detallado y profesional para incluirlo 
 🔹 Sistema Operativo:
 Windows 10 o superior (también compatible con macOS o Linux)
 
-🔹 Herramientas necesarias:
+##🔹 Herramientas necesarias:
 
 | Herramienta|	Versión |recomendada	|Descripción|
 |--------------------|----------------------|----------------|
