@@ -82,7 +82,7 @@ flutter pub get
 Este proyecto forma parte de un desarrollo educativo y colaborativo.
 ¡Pull requests, issues y sugerencias son siempre bienvenidas!
 
-🧑‍💻 Autorres
+🧑‍💻 Autores
 Óscar Jaramillo
 | Desarrolladores de software | 
  Oscar Eduardo Jaramillo Plaza 
