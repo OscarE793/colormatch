@@ -6,9 +6,9 @@
 
 ## 📱 Capturas de pantalla
 
-| Pantalla de Inicio | Selección de Niveles | Juego en Curso | Calificación |
-|--------------------|----------------------|----------------|----------------|
-| ![Inicio](assets/images/Inicio.png) | ![Menu](assets/images/Menu.png) | ![Niveles](assets/images/Niveles.png) | ![Juego](assets/images/Juego.png) |![Calificación](assets/images/Leaderoard.png) |
+| Pantalla de Inicio | Selección de Menus| Selección de Niveles | Juego en Curso | Calificación |
+|--------------------|----------------------|----------------------|----------------|----------------|
+| ![Inicio](assets/images/Inicio.png) | ![Inicio](assets/images/Menu.png) | ![Niveles](assets/images/Niveles.png) | ![Juego](assets/images/Juego.png) |![Calificación](assets/images/Leaderoard.png) |
 
 ---
 
