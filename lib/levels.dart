@@ -37,7 +37,7 @@ class Levels extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 100),
+              margin: const EdgeInsets.only(top: 50),
               width: 300,
               height: 65,
               child: TextButton(
@@ -57,7 +57,7 @@ class Levels extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 100),
+              margin: const EdgeInsets.only(top: 50),
               width: 300,
               height: 65,
               child: TextButton(

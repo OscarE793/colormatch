@@ -1,5 +1,6 @@
 import 'package:color_match/main.dart';
 import 'package:color_match/levels.dart';
+import 'package:color_match/weekly.dart';
 import 'package:flutter/material.dart';
 
 
@@ -87,7 +88,7 @@ class Menu extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Levels();
+                              return Weekly();
                             },
                           ),
                         );

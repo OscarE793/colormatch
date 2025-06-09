@@ -8,7 +8,7 @@
 
 | Pantalla de Inicio | Selección de Niveles | Juego en Curso | Calificación |
 |--------------------|----------------------|----------------|----------------|
-| ![Inicio](assets/images/Inicio.png) | ![Niveles](assets/images/Niveles.png) | ![Juego](assets/images/Juego.png) |![Calificación](assets/images/Leaderoard.png) |
+| ![Inicio](assets/images/Inicio.png) | ![Menu](assets/images/Menu.png) | ![Niveles](assets/images/Niveles.png) | ![Juego](assets/images/Juego.png) |![Calificación](assets/images/Leaderoard.png) |
 
 ---
 
@@ -87,6 +87,7 @@ Este proyecto forma parte de un desarrollo educativo y colaborativo.
 | Desarrolladores de software | 
  Oscar Eduardo Jaramillo Plaza 
  Juan Sebastián vasquez leon 
+ Juan David Vakencia Martínez
 GitHub: OscarE793 
 
 ⚠️ Licencia
