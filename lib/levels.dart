@@ -33,7 +33,7 @@ class Levels extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text('EASY'),
+                child: const Text('EASY', style:TextStyle(fontSize: 20)),
               ),
             ),
             Container(
@@ -53,7 +53,7 @@ class Levels extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text('MEDIUM'),
+                child: const Text('MEDIUM', style:TextStyle(fontSize: 20)),
               ),
             ),
             Container(
@@ -73,7 +73,7 @@ class Levels extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text('HARD'),
+                child: const Text('HARD', style:TextStyle(fontSize: 20)),
               ),
             ),
           ],

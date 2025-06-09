@@ -63,7 +63,7 @@ class Menu extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text("Jugar"),
+                      child: Text("Jugar", style:TextStyle(fontSize: 20)),
                     ),
                   ),
                   Container(
@@ -93,7 +93,7 @@ class Menu extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text("Desafio Semanal"),
+                      child: Text("Desafio Semanal", style:TextStyle(fontSize: 20)),
                     ),
                   ),
                   Container(
@@ -123,7 +123,7 @@ class Menu extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text("Tabla de clasificación"),
+                      child: Text("Tabla de clasificación", style:TextStyle(fontSize: 20)),
                     ),
                   ),
                   Container(
@@ -153,7 +153,7 @@ class Menu extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text("Configuración"),
+                      child: Text("Configuración", style:TextStyle(fontSize: 20)),
                     ),
                   ),
 

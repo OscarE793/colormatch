@@ -24,15 +24,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(137, 16, 10, 63),
-      appBar: AppBar(backgroundColor: Colors.black54),
+      appBar: AppBar(
+        backgroundColor: Colors.black54,
+        foregroundColor: Colors.white,),
       body: Center(
         child: Column(
           children: [
             Image.asset('assets/images/logo.GIF', width: 400.0),
             Container(
               margin: const EdgeInsets.only(top: 100),
-              width: 200,
-              height: 50,
+              width: 300,
+              height: 65,
               child: TextButton(
                 style: ButtonStyle(
                   foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
@@ -51,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Menu()),
                   );
                 },
-                child: const Text("Play"),
+                child: const Text("Iniciar", style:TextStyle(fontSize: 20)),
               ),
             ),
           ],
