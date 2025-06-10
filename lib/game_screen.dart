@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class GameScreen extends StatefulWidget {
   final String difficulty;
@@ -17,11 +19,43 @@ class _GameScreenState extends State<GameScreen> {
   int? _firstSelected;
   int score = 0;
 
+  final Set<int> _matchedIndices = {};
+  AudioPlayer? _bgMusicPlayer;
+  AudioPlayer? _winPlayer;
+  ConfettiController? _confettiController;
+
+  late Timer _timer;
+  int _seconds = 0;
+  bool _hasTimerStopped = false;
+
+  final Color backgroundColor = const Color(0xFF070022);
+
   @override
   void initState() {
     super.initState();
+    _bgMusicPlayer = AudioPlayer();
+    _winPlayer = AudioPlayer();
+    _confettiController = ConfettiController(duration: const Duration(seconds: 1));
+
+    _startBackgroundMusic();
     _configureLevel();
     _generateBoard();
+    _startTimer();
+  }
+
+  void _startTimer() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!_hasTimerStopped) {
+        setState(() {
+          _seconds++;
+        });
+      }
+    });
+  }
+
+  Future<void> _startBackgroundMusic() async {
+    await _bgMusicPlayer!.setReleaseMode(ReleaseMode.loop);
+    await _bgMusicPlayer!.play(AssetSource('sounds/background.mp3'));
   }
 
   void _configureLevel() {
@@ -44,18 +78,18 @@ class _GameScreenState extends State<GameScreen> {
 
   void _generateBoard() {
     List<Color> baseColors = [
-      Colors.red,
-      Colors.green,
-      Colors.blue,
-      Colors.yellow,
-      Colors.orange,
-      Colors.purple,
-      Colors.teal,
-      Colors.pink,
-      Colors.cyan,
-      Colors.lime,
-      Colors.indigo,
-      Colors.brown,
+      Colors.redAccent,
+      Colors.greenAccent,
+      Colors.blueAccent,
+      Colors.yellowAccent,
+      Colors.orangeAccent,
+      Colors.purpleAccent,
+      Colors.tealAccent,
+      Colors.pinkAccent,
+      Colors.cyanAccent,
+      Colors.limeAccent,
+      Colors.indigoAccent,
+      Colors.amberAccent,
     ];
 
     _colors = [...baseColors.take(numPairs), ...baseColors.take(numPairs)];
@@ -64,8 +98,10 @@ class _GameScreenState extends State<GameScreen> {
     _revealed = List.generate(_colors.length, (_) => false);
   }
 
-  void _onTileTap(int index) {
+  void _onTileTap(int index) async {
     if (_revealed[index]) return;
+
+    await SoundManager.playClick();
 
     setState(() {
       _revealed[index] = true;
@@ -84,9 +120,14 @@ class _GameScreenState extends State<GameScreen> {
           });
         });
       } else {
-        // Correct match
-        score += 10;
-        _firstSelected = null;
+        await SoundManager.playMatch();
+        _confettiController?.play();
+
+        setState(() {
+          _matchedIndices.addAll([_firstSelected!, secondSelected]);
+          score += 10;
+          _firstSelected = null;
+        });
       }
     }
   }
@@ -97,7 +138,6 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     if (_hasWon) {
       Future.microtask(() => showDialog(
-            // ignore: use_build_context_synchronously
             context: context,
             barrierDismissible: false,
             builder: (_) => AlertDialog(
@@ -114,10 +154,8 @@ class _GameScreenState extends State<GameScreen> {
     }
 
     return Scaffold(
-      
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(137, 16, 10, 63),
-        title: Text('Nivel: ${widget.difficulty}'),
+        title: Text('Level: ${widget.difficulty}'),
       ),
       body: Column(
         children: [
