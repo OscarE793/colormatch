@@ -88,6 +88,7 @@ Este proyecto forma parte de un desarrollo educativo y colaborativo.
  Oscar Eduardo Jaramillo Plaza 
  Juan Sebastián vasquez leon 
  Juan David Valencia Martínez
+ Johan Stiven Nieto Medina
 GitHub: OscarE793 
 
 ⚠️ Licencia
