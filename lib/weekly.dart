@@ -9,12 +9,13 @@ class Weekly extends StatelessWidget {
 
   
   const Weekly({super.key});
-
+  
 
   @override
   Widget build(BuildContext context) {
-    int pasoActual = 1;
+    int pasoActual ;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: '',
       home: Scaffold(
         backgroundColor: const Color.fromARGB(137, 16, 10, 63),

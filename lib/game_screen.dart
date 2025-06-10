@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class GameScreen extends StatefulWidget {
   final String difficulty;
@@ -98,6 +97,7 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     if (_hasWon) {
       Future.microtask(() => showDialog(
+            // ignore: use_build_context_synchronously
             context: context,
             barrierDismissible: false,
             builder: (_) => AlertDialog(
@@ -114,8 +114,10 @@ class _GameScreenState extends State<GameScreen> {
     }
 
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text('Level: ${widget.difficulty}'),
+        backgroundColor: const Color.fromARGB(137, 16, 10, 63),
+        title: Text('Nivel: ${widget.difficulty}'),
       ),
       body: Column(
         children: [

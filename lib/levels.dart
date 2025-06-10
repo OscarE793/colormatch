@@ -12,12 +12,12 @@ class Levels extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-              'Select Level',
+              'Seleccione \n  el nivel',
               textScaler: TextScaler.linear(3.5),
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 150),
+              margin: EdgeInsets.only(top: 100),
               width: 300,
               height: 65,
               child: TextButton(
@@ -29,11 +29,11 @@ class Levels extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const GameScreen(difficulty: 'easy'),
+                      builder: (context) => const GameScreen(difficulty: 'Facil'),
                     ),
                   );
                 },
-                child: const Text('EASY', style:TextStyle(fontSize: 20)),
+                child: const Text('FACIL', style:TextStyle(fontSize: 20)),
               ),
             ),
             Container(
@@ -49,11 +49,11 @@ class Levels extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const GameScreen(difficulty: 'medium'),
+                      builder: (context) => const GameScreen(difficulty: 'Normal'),
                     ),
                   );
                 },
-                child: const Text('MEDIUM', style:TextStyle(fontSize: 20)),
+                child: const Text('NORMAL', style:TextStyle(fontSize: 20)),
               ),
             ),
             Container(
@@ -69,11 +69,11 @@ class Levels extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const GameScreen(difficulty: 'hard'),
+                      builder: (context) => const GameScreen(difficulty: 'Dificil'),
                     ),
                   );
                 },
-                child: const Text('HARD', style:TextStyle(fontSize: 20)),
+                child: const Text('DIFICIL', style:TextStyle(fontSize: 20)),
               ),
             ),
           ],
