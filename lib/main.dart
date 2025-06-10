@@ -42,9 +42,8 @@ class HomeScreen extends StatelessWidget {
                   overlayColor: WidgetStateProperty.resolveWith<Color?>((
                     Set<WidgetState> states,
                   ) {
-                    if (states.contains(WidgetState.pressed)) {
+                    if (states.contains(WidgetState.pressed))
                       return Colors.black.withGreen(122);
-                    }
                     return null;
                   }),
                 ),

@@ -12,12 +12,12 @@ class Levels extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-              'Seleccione \n  el nivel',
+              'Seleccione \n   el nivel',
               textScaler: TextScaler.linear(3.5),
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Container(
-              margin: EdgeInsets.only(top: 100),
+              margin: const EdgeInsets.only(top: 150),
               width: 300,
               height: 65,
               child: TextButton(
@@ -29,7 +29,7 @@ class Levels extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const GameScreen(difficulty: 'Facil'),
+                      builder: (context) => const GameScreen(difficulty: 'facil'),
                     ),
                   );
                 },

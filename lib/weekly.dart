@@ -13,7 +13,7 @@ class Weekly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int pasoActual ;
+    int pasoActual = 1;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '',
