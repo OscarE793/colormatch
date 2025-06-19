@@ -1,3 +1,5 @@
+import 'package:color_match/configuration.dart';
+import 'package:color_match/leader_board.dart';
 import 'package:color_match/main.dart';
 import 'package:color_match/levels.dart';
 import 'package:color_match/weekly.dart';
@@ -118,7 +120,7 @@ class Menu extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Levels();
+                              return LeaderBoard();
                             },
                           ),
                         );
@@ -148,7 +150,7 @@ class Menu extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Levels();
+                              return Configuration();
                             },
                           ),
                         );

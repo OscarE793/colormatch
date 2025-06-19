@@ -1,94 +1,118 @@
+import 'package:flutter/material.dart';
 import 'package:color_match/levels.dart';
 import 'package:color_match/menu.dart';
-import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-
-
-
-class Weekly extends StatelessWidget {
-
-  
+class Weekly extends StatefulWidget {
   const Weekly({super.key});
-  
+
+  @override
+  State<Weekly> createState() => _WeeklyState();
+}
+
+class _WeeklyState extends State<Weekly> {
+  int pasoActual = 0;
+
+  Future<void> _incrementarPaso() async {
+    if (pasoActual < 3) {
+      setState(() {
+        pasoActual++;
+      });
+
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('pasoActual', pasoActual);
+
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    int pasoActual = 1;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: '',
+      title: 'Desafío Semanal',
       home: Scaffold(
         backgroundColor: const Color.fromARGB(137, 16, 10, 63),
         appBar: AppBar(
           backgroundColor: Colors.black54,
           foregroundColor: Colors.white,
-          title: const Text('Desafio  Semanal'),
-                          leading:IconButton(
-                    icon:Icon(Icons.arrow_back),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return Menu();
-                          },
-                        ),
-                      );
-                    }
-                )
+          title: const Text('Desafío Semanal'),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const Menu()),
+              );
+            },
+          ),
         ),
-        body:  Center(
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Desafio\nSemanal',textScaler: TextScaler.linear(3.5), style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+              const Text(
+                'Desafío\nSemanal',
+                textAlign: TextAlign.center,
+                textScaler: TextScaler.linear(3.5),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
               Container(
-                margin: const EdgeInsets.all(80),
+                margin: const EdgeInsets.all(40),
                 width: 300,
-                height: 300,
-                padding:EdgeInsets.all(50),
+                padding: const EdgeInsets.all(32),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30), // Borde redondeado
+                  borderRadius: BorderRadius.circular(30),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  
                   children: [
-                    Text('Completa \nal menos \ntres juegos',textScaler: TextScaler.linear(2), style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),
-                    SizedBox(height: 16),
-                    LinearProgressIndicator(
-
-                     value: pasoActual / 3, // Normalizado: 0.33, 0.66, 1.0
-                     backgroundColor: Colors.grey[300],
-                     valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-                     minHeight: 12,
+                    const Text(
+                      'Completa\nal menos\ntres juegos',
+                      textAlign: TextAlign.center,
+                      textScaler: TextScaler.linear(2),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
-                    Text('$pasoActual de 3'),
+                    const SizedBox(height: 16),
+                    LinearProgressIndicator(
+                      value: pasoActual / 3,
+                      backgroundColor: Colors.grey[300],
+                      valueColor:
+                          const AlwaysStoppedAnimation<Color>(Colors.blue),
+                      minHeight: 12,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      '$pasoActual de 3',
+                      style: const TextStyle(fontSize: 16),
+                    ),
                   ],
-                )
+                ),
               ),
               FilledButton(
-                onPressed: (){
+                onPressed: () {
+                  _incrementarPaso();
                   Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return Levels();
-                          }
-                        )
-                      );
+                    context,
+                    MaterialPageRoute(builder: (_) => const Levels()),
+                  );
                 },
                 style: FilledButton.styleFrom(
                   backgroundColor: Colors.green,
                   foregroundColor: Colors.white,
-                  minimumSize: Size(300, 65),
-                  textStyle: TextStyle(fontSize: 20)
+                  minimumSize: const Size(300, 65),
+                  textStyle: const TextStyle(fontSize: 20),
                 ),
-                child: const Text('Iniciar Desafio'),
-              )
+                child: const Text('Iniciar Desafío'),
+              ),
             ],
-          )
+          ),
         ),
       ),
     );
