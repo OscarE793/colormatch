@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class Configuration extends StatelessWidget {
-  const Configuration({super.key});
+class Challenges extends StatelessWidget {
+  const Challenges({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class Configuration extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Configuration'),
+              Text('Desafios'),
             ],
           ),
         ),

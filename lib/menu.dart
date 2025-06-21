@@ -1,4 +1,4 @@
-import 'package:color_match/configuration.dart';
+import 'package:color_match/challenges.dart';
 import 'package:color_match/leader_board.dart';
 import 'package:color_match/main.dart';
 import 'package:color_match/levels.dart';
@@ -90,12 +90,12 @@ class Menu extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Weekly();
+                              return Challenges();
                             },
                           ),
                         );
                       },
-                      child: Text("Desafio Semanal", style:TextStyle(fontSize: 20)),
+                      child: Text("Desafios", style:TextStyle(fontSize: 20)),
                     ),
                   ),
                   Container(
@@ -120,12 +120,12 @@ class Menu extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return LeaderBoard();
+                              return Weekly();
                             },
                           ),
                         );
                       },
-                      child: Text("Tabla de clasificación", style:TextStyle(fontSize: 20)),
+                      child: Text("Desfio semanal", style:TextStyle(fontSize: 20)),
                     ),
                   ),
                   Container(
@@ -150,12 +150,12 @@ class Menu extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Configuration();
+                              return LeaderBoard();
                             },
                           ),
                         );
                       },
-                      child: Text("Configuración", style:TextStyle(fontSize: 20)),
+                      child: Text("Tabla de clasificación", style:TextStyle(fontSize: 20)),
                     ),
                   ),
 
